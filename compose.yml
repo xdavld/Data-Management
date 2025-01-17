@@ -1,0 +1,66 @@
+services:
+  storage:
+    image: minio/minio:latest
+    container_name: minio
+    command: server --console-address ":9101" /data
+    ports:
+      - "9000:9000" # MinIO API
+      - "9101:9101" # MinIO Console
+    environment:
+      MINIO_ROOT_USER: "${MINIO_ROOT_USER}"
+      MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD}"
+    volumes:
+      - ./minio/data:/data
+      - ./minio/config:/root/.minio
+
+  storage-init:
+    image: minio/mc:latest
+    container_name: minio-init
+    depends_on:
+      - storage
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5 &&
+      mc alias set myminio http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD} &&
+      if ! mc ls myminio/lakehouse-storage >/dev/null 2>&1; then
+        mc mb myminio/lakehouse-storage;
+      fi
+      "
+
+  compute:
+    build:
+      context: ./compute
+      dockerfile: Dockerfile
+    container_name: duckdb-ibis-python
+    working_dir: /app
+    volumes:
+      - ./compute/src:/app/src
+      - ./compute/data:/app/data
+    depends_on:
+      - storage
+    environment:
+      MINIO_URL: "${MINIO_URL}"
+      MINIO_ACCESS_KEY: "${MINIO_ACCESS_KEY}"
+      MINIO_SECRET_KEY: "${MINIO_SECRET_KEY}"
+
+  visualisation:
+    image: apache/superset:latest
+    container_name: apache-superset
+    ports:
+      - "8088:8088"
+    environment:
+      SUPERSET_LOAD_EXAMPLES: "yes"
+      SUPERSET_ADMIN_USERNAME: "${SUPERSET_ADMIN_USERNAME}"
+      SUPERSET_ADMIN_PASSWORD: "${SUPERSET_ADMIN_PASSWORD}"
+      SUPERSET_SECRET_KEY: "${SUPERSET_SECRET_KEY}"
+    depends_on:
+      - compute
+    volumes:
+      - ./superset:/var/lib/superset
+    command: >
+      /bin/sh -c "
+      superset db upgrade &&
+      superset fab create-admin --username ${SUPERSET_ADMIN_USERNAME} --password ${SUPERSET_ADMIN_PASSWORD} --firstname Admin --lastname User --email admin@example.com &&
+      superset init &&
+      superset run -h 0.0.0.0 -p 8088
+      "

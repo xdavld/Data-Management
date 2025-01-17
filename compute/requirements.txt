@@ -1,0 +1,8 @@
+duckdb
+ibis-framework
+s3fs
+pandas
+pyarrow
+boto3
+pyspark==3.3.2
+delta-spark==2.2.0
