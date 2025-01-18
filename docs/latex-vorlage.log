@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.16)  17 JAN 2025 01:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.16)  18 JAN 2025 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -833,7 +833,15 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'latex-vorlage.bbl' found.
- (./latex-vorlage.bbl)
+ (./latex-vorlage.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                OhneAutorenOhneJahr
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 17.
 Package biblatex Info: Reference segment=0 on input line 17.
 Package hyperref Info: Link coloring OFF on input line 17.
@@ -898,46 +906,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 ] (./includes/abkuerzungen.tex
 
-LaTeX Warning: Hyper reference `acro:CRM' on page III undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:ACID' on page III undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:CRM' on page III undefined on input line 5.
-
-
-LaTeX Warning: Hyper reference `acro:DHBW' on page III undefined on input line 6.
-
-
-LaTeX Warning: Hyper reference `acro:DHBW' on page III undefined on input line 6.
-
-
-LaTeX Warning: Hyper reference `acro:IEEE' on page III undefined on input line 7.
-
-
-LaTeX Warning: Hyper reference `acro:IEEE' on page III undefined on input line 7.
-
-
-LaTeX Warning: Hyper reference `acro:ITIL' on page III undefined on input line 8.
-
-
-LaTeX Warning: Hyper reference `acro:ITIL' on page III undefined on input line 8.
-
-
-LaTeX Warning: Hyper reference `acro:RoI' on page III undefined on input line 9.
-
-
-LaTeX Warning: Hyper reference `acro:RoI' on page III undefined on input line 9.
-
-
-LaTeX Warning: Hyper reference `acro:UCS' on page III undefined on input line 10.
-
-
-LaTeX Warning: Hyper reference `acro:UCS' on page III undefined on input line 10.
-
-
-LaTeX Warning: Hyper reference `acro:UTF-8' on page III undefined on input line 11.
-
-
-LaTeX Warning: Hyper reference `acro:UTF-8' on page III undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:ACID' on page III undefined on input line 5.
 
 ) [3
 
@@ -956,51 +928,66 @@ LaTeX Warning: Hyper reference `acro:UTF-8' on page III undefined on input line 
 
 ] (./includes/Grundlagen.tex
 chapter 1.
-
-LaTeX Warning: Reference `abb:Logo2cmBreit' on page 1 undefined on input line 6.
-
-
-LaTeX Warning: Reference `abb:Logo2cmBreit' on page 1 undefined on input line 9.
-
-) (./includes/Installation.tex [1
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+Package acronym Info: Label `acro:ML' newly defined as it shall be overridden
+although it is yet undefined on input line 3.
+Package acronym Info: Label `acro:BI' newly defined as it shall be overridden
+although it is yet undefined on input line 4.
+Package acronym Info: Label `acro:SQL' newly defined as it shall be overridden
+although it is yet undefined on input line 4.
+Package acronym Info: Label `acro:ETL' newly defined as it shall be overridden
+although it is yet undefined on input line 7.
+Package acronym Info: Label `acro:OLTP' newly defined as it shall be overridden
+although it is yet undefined on input line 10.
+Package acronym Info: Label `acro:OLAP' newly defined as it shall be overridden
+although it is yet undefined on input line 13.
+Package acronym Info: Label `acro:DW' newly defined as it shall be overridden
+although it is yet undefined on input line 15.
+Package acronym Info: Label `acro:DL' newly defined as it shall be overridden
+although it is yet undefined on input line 17.
+[1
 
 
 
 ]
+Package acronym Info: Label `acro:LH' newly defined as it shall be overridden
+although it is yet undefined on input line 20.
+) (./includes/Installation.tex [2]
 chapter 2.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
+
+LaTeX Warning: Reference `section:fehlerbehebung' on page 3 undefined on input line 7.
 
 
-LaTeX Warning: Reference `section:fehlerbehebung' on page 2 undefined on input line 7.
+LaTeX Warning: Reference `chapter:zitate' on page 3 undefined on input line 7.
 
 
-LaTeX Warning: Reference `chapter:zitate' on page 2 undefined on input line 7.
+LaTeX Warning: Reference `chapter:abbildungenTabellen' on page 3 undefined on input line 7.
 
-
-LaTeX Warning: Reference `chapter:abbildungenTabellen' on page 2 undefined on input line 7.
-
-) (./includes/Beispiel.tex [2
+) (./includes/Beispiel.tex [3
 
 ]
 chapter 3.
 
-LaTeX Warning: Reference `abb:Logo2cmBreit' on page 3 undefined on input line 6.
+LaTeX Warning: Reference `abb:Logo2cmBreit' on page 4 undefined on input line 6.
 
-<graphics/dhbw.png, id=83, 710.655pt x 299.1175pt>
+<graphics/dhbw.png, id=165, 710.655pt x 299.1175pt>
 File: graphics/dhbw.png Graphic file (type png)
 <use graphics/dhbw.png>
 Package pdftex.def Info: graphics/dhbw.png  used on input line 10.
 (pdftex.def)             Requested size: 135.19934pt x 56.9055pt.
-) [3
 
- <./graphics/dhbw.png>] [4
+LaTeX Warning: Citation 'OhneAutorenOhneJahr' on page 4 undefined on input line 14.
+
+) [4
+
+ <./graphics/dhbw.png>] [5
 
 
 ] (./includes/erklaerung_ki.tex
@@ -1028,17 +1015,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--106
 []\T1/cmr/m/n/10.95 Einige Pro-gramm-zei-len wur-den an
  []
 
-) (./template/_dhbw_erklaerung.tex [5
+) (./template/_dhbw_erklaerung.tex [6
 
 
 
 ]
-<graphics/signature.png, id=109, 189.70876pt x 65.24374pt>
+<graphics/signature.png, id=192, 189.70876pt x 65.24374pt>
 File: graphics/signature.png Graphic file (type png)
 <use graphics/signature.png>
 Package pdftex.def Info: graphics/signature.png  used on input line 19.
 (pdftex.def)             Requested size: 136.57462pt x 46.97047pt.
-) [6
+) [7
 
  <./graphics/signature.png>] (./latex-vorlage.aux)
 
@@ -1054,18 +1041,18 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26632 strings out of 478268
- 535329 string characters out of 5846347
- 1397824 words of memory out of 5000000
- 44445 multiletter control sequences out of 15000+600000
- 485754 words of font info for 58 fonts, out of 8000000 for 9000
+ 26736 strings out of 478268
+ 537453 string characters out of 5846347
+ 1404600 words of memory out of 5000000
+ 44525 multiletter control sequences out of 15000+600000
+ 487206 words of font info for 60 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,17n,106p,10682b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on latex-vorlage.pdf (11 pages, 280890 bytes).
+ 108i,18n,106p,10682b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on latex-vorlage.pdf (12 pages, 343389 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 262 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
  99 words of extra memory for PDF output out of 10000 (max. 10000000)
 

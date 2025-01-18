@@ -19,26 +19,146 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{OhneAutorenOhneJahr}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=4353cfcbb3e2e700a10ee3278596bbab}{%
-           family={o.V.},
-           familyi={o\bibinitperiod}}}%
+    \entry{armbrustLakehouseNewGeneration2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8eafad8289b06f72c2e8b7caf80a413a}{%
+           family={Armbrust},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dfd14c69d2338ce9cf556c819a32d286}{%
+           family={Ghodsi},
+           familyi={G\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=125f074bf46e8a83339101fd94d088e2}{%
+           family={Xin},
+           familyi={X\bibinitperiod},
+           given={Reynold},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00dc518b94dfa6349c86e70661a1a5ef}{%
+           family={Zaharia},
+           familyi={Z\bibinitperiod},
+           given={Matei},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{4353cfcbb3e2e700a10ee3278596bbab}
-      \strng{fullhash}{4353cfcbb3e2e700a10ee3278596bbab}
-      \strng{bibnamehash}{4353cfcbb3e2e700a10ee3278596bbab}
-      \strng{authorbibnamehash}{4353cfcbb3e2e700a10ee3278596bbab}
-      \strng{authornamehash}{4353cfcbb3e2e700a10ee3278596bbab}
-      \strng{authorfullhash}{4353cfcbb3e2e700a10ee3278596bbab}
-      \field{sortinit}{o}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{labeldatesource}{nodate}
+      \strng{namehash}{1bae7c2a3fe6ea29ffc01edd0ac606b5}
+      \strng{fullhash}{bc60141ecc792bc71806b3e2c75a40c8}
+      \strng{bibnamehash}{bc60141ecc792bc71806b3e2c75a40c8}
+      \strng{authorbibnamehash}{bc60141ecc792bc71806b3e2c75a40c8}
+      \strng{authornamehash}{1bae7c2a3fe6ea29ffc01edd0ac606b5}
+      \strng{authorfullhash}{bc60141ecc792bc71806b3e2c75a40c8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{UnbekannterAutor, unbekannterTitel}
+      \field{abstract}{This paper argues that the data warehouse architecture as we know it today will wither in the coming years and be replaced by a new architectural pattern, the Lakehouse, which will (i) be based on open direct-access data formats, such as Apache Parquet, (ii) have firstclass support for machine learning and data science, and (iii) offer state-of-the-art performance. Lakehouses can help address several major challenges with data warehouses, including data staleness, reliability, total cost of ownership, data lock-in, and limited use-case support. We discuss how the industry is already moving toward Lakehouses and how this shift may affect work in data management. We also report results from a Lakehouse system using Parquet that is competitive with popular cloud data warehouses on TPC-DS.}
+      \field{langid}{english}
+      \field{title}{Lakehouse: {{A New Generation}} of {{Open Platforms}} That {{Unify Data Warehousing}} and {{Advanced Analytics}}}
+      \field{year}{2021}
+      \verb{file}
+      \verb /Users/david/Zotero/storage/6FDML864/Armbrust et al. - 2021 - Lakehouse A New Generation of Open Platforms that.pdf
+      \endverb
+    \endentry
+    \entry{mazumdarDataLakehouseData2023}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=01f21c1a682f93e70e5e71d3ba7faf12}{%
+           family={Mazumdar},
+           familyi={M\bibinitperiod},
+           given={Dipankar},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4fb5b97bec035c477782b5494a2d9ad}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8dd90099d9e7d2e85b28e36414f0c5c4}{%
+           family={Onofre},
+           familyi={O\bibinitperiod},
+           given={J.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{93e2d9fae0c55596d721da0a67faf6c8}
+      \strng{fullhash}{93e2d9fae0c55596d721da0a67faf6c8}
+      \strng{bibnamehash}{93e2d9fae0c55596d721da0a67faf6c8}
+      \strng{authorbibnamehash}{93e2d9fae0c55596d721da0a67faf6c8}
+      \strng{authornamehash}{93e2d9fae0c55596d721da0a67faf6c8}
+      \strng{authorfullhash}{93e2d9fae0c55596d721da0a67faf6c8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Relational Database Management Systems designed for Online Analytical Processing (RDBMS-OLAP) have been foundational to democratizing data and enabling analytical use cases such as business intelligence and reporting for many years. However, RDBMS-OLAP systems present some well-known challenges. They are primarily optimized only for relational workloads, lead to proliferation of data copies which can become unmanageable, and since the data is stored in proprietary formats, it can lead to vendor lock-in, restricting access to engines, tools, and capabilities beyond what the vendor offers. As the demand for data-driven decision making surges, the need for a more robust data architecture to address these challenges becomes ever more critical. Cloud data lakes have addressed some of the shortcomings of RDBMS-OLAP systems, but they present their own set of challenges. More recently, organizations have often followed a two-tier architectural approach to take advantage of both these platforms, leveraging both cloud data lakes and RDBMSOLAP systems. However, this approach brings additional challenges, complexities, and overhead.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{arXiv:2310.08697}
+      \field{shorttitle}{The {{Data Lakehouse}}}
+      \field{title}{The {{Data Lakehouse}}: {{Data Warehousing}} and {{More}}}
+      \field{urlday}{25}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2310.08697
+      \endverb
+      \verb{file}
+      \verb /Users/david/Zotero/storage/SNNWS7QE/Mazumdar et al. - 2023 - The Data Lakehouse Data Warehousing and More.pdf
+      \endverb
+      \keyw{Computer Science - Databases}
+    \endentry
+    \entry{vaismanDataWarehouseSystems2014}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ebb08ff5120e6bd00a89e58d6b1e3b66}{%
+           family={Vaisman},
+           familyi={V\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=51a18b118243b2d980f368f1bcf87dbd}{%
+           family={Zimnyi},
+           familyi={Z\bibinitperiod},
+           given={Esteban},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Publishing Company, Incorporated}%
+      }
+      \strng{namehash}{7748e5eb3c357417d7a389f5523483de}
+      \strng{fullhash}{7748e5eb3c357417d7a389f5523483de}
+      \strng{bibnamehash}{7748e5eb3c357417d7a389f5523483de}
+      \strng{authorbibnamehash}{7748e5eb3c357417d7a389f5523483de}
+      \strng{authornamehash}{7748e5eb3c357417d7a389f5523483de}
+      \strng{authorfullhash}{7748e5eb3c357417d7a389f5523483de}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-642-54654-4}
+      \field{title}{Data {{Warehouse Systems}}: {{Design}} and {{Implementation}}}
+      \field{year}{2014}
     \endentry
   \enddatalist
+  \missing{OhneAutorenOhneJahr}
 \endrefsection
 \endinput
 
