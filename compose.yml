@@ -12,6 +12,8 @@ services:
     volumes:
       - ./minio/data:/data
       - ./minio/config:/root/.minio
+    networks:
+      - lakehouse-network
 
   storage-init:
     image: minio/mc:latest
@@ -26,39 +28,48 @@ services:
         mc mb myminio/lakehouse-storage;
       fi
       "
+    networks:
+      - lakehouse-network
 
   compute:
     build:
       context: ./compute
       dockerfile: Dockerfile
     container_name: duckdb-ibis-python
+    depends_on:
+      - storage
     working_dir: /app
     volumes:
       - ./compute/src:/app/src
       - ./compute/data:/app/data
-    depends_on:
-      - storage
+      - ./compute/duckdb-file:/app/duckdb-file 
     environment:
-      MINIO_URL: "${MINIO_URL}"
+      MINIO_URL: "http://minio:9000"
       MINIO_ACCESS_KEY: "${MINIO_ACCESS_KEY}"
       MINIO_SECRET_KEY: "${MINIO_SECRET_KEY}"
+    networks:
+      - lakehouse-network
 
   visualisation:
     image: apache/superset:latest
     container_name: apache-superset
     ports:
       - "8088:8088"
+    depends_on:
+      - compute
     environment:
       SUPERSET_LOAD_EXAMPLES: "yes"
       SUPERSET_ADMIN_USERNAME: "${SUPERSET_ADMIN_USERNAME}"
       SUPERSET_ADMIN_PASSWORD: "${SUPERSET_ADMIN_PASSWORD}"
       SUPERSET_SECRET_KEY: "${SUPERSET_SECRET_KEY}"
-    depends_on:
-      - compute
     volumes:
       - ./superset:/var/lib/superset
+      - ./compute/duckdb-file:/app/duckdb-file 
+    networks:
+      - lakehouse-network
     command: >
       /bin/sh -c "
+      pip install duckdb &&
       superset db upgrade &&
       superset fab create-admin --username ${SUPERSET_ADMIN_USERNAME} --password ${SUPERSET_ADMIN_PASSWORD} --firstname Admin --lastname User --email admin@example.com &&
       superset init &&
@@ -77,15 +88,18 @@ services:
       - SPARK_WORKER_MEMORY=2G
       - AWS_ACCESS_KEY_ID=${MINIO_ROOT_USER}
       - AWS_SECRET_ACCESS_KEY=${MINIO_SECRET_KEY}
-      - MINIO_URL=${MINIO_URL}
+      - MINIO_URL=http://minio:9000
     ports:
       - "8080:8080"   # Master web UI
       - "7077:7077"   # Master RPC port
-      - "4040:4040"   # Driver web UI (if running spark-submit within this container)
+      - "4040:4040"   # Driver web UI 
     volumes:
-      - ./spark/src:/app
+      - ./spark/src:/app/src
+      - ./spark/data:/app/data
       - ./spark/delta-data:/tmp/delta-table
-      - ./spark/logs:/opt/spark/logs  
+      - ./spark/logs:/opt/spark/logs
+    networks:
+      - lakehouse-network
 
   spark-worker:
     build:
@@ -94,16 +108,85 @@ services:
     container_name: spark-worker
     depends_on:
       - spark-master
-      - minio
+      - storage
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
       - SPARK_WORKER_MEMORY=2G
       - AWS_ACCESS_KEY_ID=${MINIO_ROOT_USER}
       - AWS_SECRET_ACCESS_KEY=${MINIO_SECRET_KEY}
-      - MINIO_URL=${MINIO_URL}
+      - MINIO_URL=http://minio:9000
     volumes:
-      - ./spark/src:/app
+      - ./spark/src:/app/src
+      - ./spark/data:/app/data
       - ./spark/delta-data:/tmp/delta-table
-      - ./spark/logs:/opt/spark/logs  
+      - ./spark/logs:/opt/spark/logs
+    networks:
+      - lakehouse-network
 
+  spark-submit:
+    build:
+      context: ./spark
+      dockerfile: Dockerfile
+    container_name: spark-submit
+    volumes:
+      - ./spark/src:/app/src
+      - ./spark/data:/app/data
+      - ./spark/delta-data:/tmp/delta-table
+      - ./spark/logs:/opt/spark/logs
+    depends_on:
+      - spark-master
+      - spark-worker
+      - storage
+    environment:
+      - MINIO_URL=http://minio:9000
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+    restart: always
+    networks:
+      - lakehouse-network
+    command: >
+      /bin/bash -c "
+      while true; do
+        echo 'Starting Spark job...';
+        spark-submit --master spark://spark-master:7077 \
+          --packages io.delta:delta-core_2.12:2.4.0,org.apache.hadoop:hadoop-aws:3.4.0,com.amazonaws:aws-java-sdk-bundle:1.12.277 \
+          /app/src/main.py;
+        echo 'Sleeping for 30 minutes...';
+        sleep 1800;
+      done
+      "
+
+  scraper:
+    platform: linux/amd64
+    build:
+      context: ./scraper
+      dockerfile: Dockerfile
+    container_name: scraper
+    volumes:
+      - ./scraper/src:/app/src
+      - ./spark/data:/app/data  
+    depends_on:
+      - storage
+    environment:
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_URL=http://minio:9000
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+      - SELENIUM_SERVER_URL=http://selenium:4444/wd/hub
+      - XDG_CACHE_HOME=/tmp/.cache
+    restart: always
+    networks:
+      - lakehouse-network
+    command: >
+      /bin/bash -c "
+      while true; do
+        echo 'Starting scraper...';
+        python3 /app/src/scrape_glasdoor.py;
+        echo 'Sleeping for 30 minutes...';
+        sleep 1800;
+      done
+      "
+
+networks:
+  lakehouse-network:
+    driver: bridge

@@ -1,8 +1,7 @@
 duckdb
 ibis-framework
+ibis-framework[duckdb]
 s3fs
 pandas
 pyarrow
 boto3
-pyspark==3.3.0
-delta-spark==2.2.0

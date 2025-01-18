@@ -1,42 +1,60 @@
 import os
-import time
-import boto3
-import pandas as pd
-
-# Environment Variables from Compose
-MINIO_URL = os.getenv("MINIO_URL")
-MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
-MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")
-BUCKET_NAME = "lakehouse-storage"
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import monotonically_increasing_id
 
 def main():
-    print("[INFO] Starting data processing and MinIO upload")
+    MINIO_URL = os.getenv("MINIO_URL")
+    MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
+    MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")
 
-    csv_path = "/app/data/ds_salaries.csv"
-    df = pd.read_csv(csv_path)
-    print(f"[INFO] Loaded CSV with {len(df)} rows")
+    spark = SparkSession.builder \
+        .appName("Delta Lake to Minio") \
+        .config("spark.jars", "/opt/spark/jars/delta-core_2.12-2.4.0.jar,/opt/spark/jars/hadoop-aws-3.4.0.jar,/opt/spark/jars/aws-java-sdk-bundle-1.12.277.jar") \
+        .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") \
+        .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog") \
+        .config("spark.hadoop.fs.s3a.endpoint", MINIO_URL) \
+        .config("spark.hadoop.fs.s3a.access.key", MINIO_ACCESS_KEY) \
+        .config("spark.hadoop.fs.s3a.secret.key", MINIO_SECRET_KEY) \
+        .config("spark.hadoop.fs.s3a.path.style.access", "true") \
+        .getOrCreate()
 
-    parquet_filename = "/app/data/ds_salaries.parquet"
-    df.to_parquet(parquet_filename, engine="pyarrow")
-    print("[INFO] Converted CSV -> Parquet")
+    # Read the original CSV file
+    df = spark.read.csv("/app/data/ds_salaries.csv", header=True, inferSchema=True)
 
-    s3_client = boto3.client(
-        "s3",
-        endpoint_url=MINIO_URL,
-        aws_access_key_id=MINIO_ACCESS_KEY,
-        aws_secret_access_key=MINIO_SECRET_KEY,
+    # Employees table with ID
+    employees_df = df.select(
+        df.employee_residence.alias("employee_residence"),
+        df.experience_level.alias("experience_level")
+    ).distinct()
+    employees_df = employees_df.withColumn("employee_id", monotonically_increasing_id())
+
+    # Jobs table with ID
+    jobs_df = df.select(
+        df.job_title.alias("job_title"),
+        df.employment_type.alias("employment_type"),
+        df.remote_ratio.alias("remote_ratio"),
+        df.company_location.alias("company_location"),
+        df.company_size.alias("company_size")
+    ).distinct()
+    jobs_df = jobs_df.withColumn("job_id", monotonically_increasing_id())
+
+    # Salaries table with ID
+    salaries_df = df.select(
+        df.work_year.alias("work_year"),
+        df.salary.alias("salary"),
+        df.salary_currency.alias("salary_currency"),
+        df.salary_in_usd.alias("salary_in_usd"),
+        df.employee_residence.alias("employee_residence"),
+        df.job_title.alias("job_title")
     )
-    s3_parquet_key = "ds_salaries.parquet" 
-    print(f"[INFO] Uploading {parquet_filename} to s3://{BUCKET_NAME}/{s3_parquet_key}")
-    s3_client.upload_file(parquet_filename, BUCKET_NAME, s3_parquet_key)
-    print("[INFO] Parquet upload completed.")
+    salaries_df = salaries_df.withColumn("salary_id", monotonically_increasing_id())
 
-    # Scraper loop that appends new data
-    print("[INFO] Starting scraper simulation...")
-    while True:
-        time.sleep(60)
+    # Write the tables to Delta
+    employees_df.write.format("delta").option("mergeSchema", "true").mode("overwrite").save("s3a://lakehouse-storage/delta-tables/employees/")
+    jobs_df.write.format("delta").option("mergeSchema", "true").mode("overwrite").save("s3a://lakehouse-storage/delta-tables/jobs/")
+    salaries_df.write.format("delta").option("mergeSchema", "true").mode("overwrite").save("s3a://lakehouse-storage/delta-tables/salaries/")
 
-        print("[SCRAPER]")
+    spark.stop()
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,9 @@
+
+SET s3_endpoint='http://minio:9000';
+SET s3_region='us-east-1';
+SET s3_access_key_id='admin';
+SET s3_secret_access_key='J@ckson123';
+SET s3_use_ssl=false;
+SET log_query_path=true;
+SET log_query_verification=true;
+
