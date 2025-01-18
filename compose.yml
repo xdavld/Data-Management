@@ -64,3 +64,46 @@ services:
       superset init &&
       superset run -h 0.0.0.0 -p 8088
       "
+
+  spark-master:
+    build:
+      context: ./spark
+      dockerfile: Dockerfile
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_MASTER_HOST=spark-master
+      - SPARK_MASTER_PORT=7077
+      - SPARK_WORKER_MEMORY=2G
+      - AWS_ACCESS_KEY_ID=${MINIO_ROOT_USER}
+      - AWS_SECRET_ACCESS_KEY=${MINIO_SECRET_KEY}
+      - MINIO_URL=${MINIO_URL}
+    ports:
+      - "8080:8080"   # Master web UI
+      - "7077:7077"   # Master RPC port
+      - "4040:4040"   # Driver web UI (if running spark-submit within this container)
+    volumes:
+      - ./spark/src:/app
+      - ./spark/delta-data:/tmp/delta-table
+      - ./spark/logs:/opt/spark/logs  
+
+  spark-worker:
+    build:
+      context: ./spark
+      dockerfile: Dockerfile
+    container_name: spark-worker
+    depends_on:
+      - spark-master
+      - minio
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=2G
+      - AWS_ACCESS_KEY_ID=${MINIO_ROOT_USER}
+      - AWS_SECRET_ACCESS_KEY=${MINIO_SECRET_KEY}
+      - MINIO_URL=${MINIO_URL}
+    volumes:
+      - ./spark/src:/app
+      - ./spark/delta-data:/tmp/delta-table
+      - ./spark/logs:/opt/spark/logs  
+
