@@ -1,11 +1,86 @@
 \chapter{Installation}\label{chapter:Installation}
 
-Bald kann nun der Text Ihrer Projekt- oder Bachelorarbeit beginnen. Dank \LaTeX\ wird Ihre Arbeit garantiert professionell aussehen. Für den Inhalt sind Sie aber weiterhin selbst verantwortlich~\mbox{;-)}
+In diesem Kapitel wird die lokale Installation der Container erläutert, welche die Basis für die in dieser Arbeit entwickelte Open Source Lakehouse Umgebung darstellt. Die Bereitstellung erfolgt mithilfe einer \lstinline|docker-compose.yml| Datei, die die Konfiguration der einzelnen Architekturkomponenten, einschließlich Speicher, Verarbeitung und Visualisierung, sowie deren Aufbau und Orchestrierung definiert.
 
-Natürlich ist es schwer, sich vorzustellen, wie das Dokument aussieht, wenn die Vorlage doch gar keinen Text enthält. Aus diesem Grund wird mit Hilfe des Pakets \enquote{blindtext} so genannter Blindtext erzeugt. Mit dem Befehl \verb|\blinddocument| wird nachfolgend ein ganzes Kapitel sinnfreier Blindtext eingefügt.\footnote{Beachten Sie, dass Sie in Ihrer Arbeit eine Strukturierung wie in Abschnitt 2.1 vermeiden sollten: Dort gibt es einen Abschnitt 2.1.1, aber keinen Abschnitt 2.1.2.} 
+\section{Voraussetzungen}
+Für eine erfolgreiche Installation müssen bestimmte Voraussetzungen erfüllt sein:
 
-In Abschnitt~\ref{section:werkzeuge} werden die benötigten Werkzeuge erklärt, bevor dann die Verwendung der Vorlage beschrieben wird. Abschnitt~\ref{section:fehlerbehebung} gibt Hilfestellungen für bestimmte Fehler. In Kapitel~\ref{chapter:zitate} finden sich Beispiele, wie Sie Quellen korrekt zitieren können. In Kapitel~\ref{chapter:abbildungenTabellen} werden Abbildungen, Tabellen, ein Code-Listing und auch mathematische Formeln in den Text eingebunden. Ab Seite~\pageref{chapter:quellen} finden Sie das Literaturverzeichnis.
+\begin{itemize}
+    \item Vorhandensein einer installierten Container-Laufzeitumgebung wie Docker\footcite{Dockerinc.DevelopFasterRun2025} oder Podman\footcite{Podman.DevelopFasterRun2025} mit Unterstützung für Compose-Dateien.
+    \item Eine korrekt konfigurierte \lstinline|.env|-Datei mit den notwendigen Umgebungsvariablen. Im Rahmen der Arbeit sind diese Werte in der bereitgestellten \lstinline|.env|-Datei bereits gesetzt.
+\end{itemize}
+
+Die Umgebungsvariablen definieren unter anderem die Zugangsdaten für MinIO und Apache Superset und bilden die Grundlage für eine funktionierende Lakehouse-Umgebung.
+
+Nachfolgend der Inhalt der \lstinline|.env|-Datei:
+
+\begin{lstlisting}[language=bash]
+# MinIO
+MINIO_ROOT_USER=
+MINIO_ROOT_PASSWORD=
+MINIO_URL=
+MINIO_BUCKET=
+MINIO_ACCESS_KEY=
+MINIO_SECRET_KEY=
+
+# Superset
+SUPERSET_ADMIN_USERNAME=
+SUPERSET_ADMIN_PASSWORD=
+SUPERSET_SECRET_KEY=
+\end{lstlisting} 
+
+\section{Installation der Container Infrastruktur}
+
+Für die Installation ist ein Terminal zu öffnen und in das Root-Verzeichnis des Ordners zu navigieren, in dem sich die \lstinline|docker-compose.yml|-Datei befindet. Die Installation erfolgt in den folgenden Schritten:
+
+\begin{enumerate}
+    \item Die \lstinline|docker-compose.yml|-Datei, siehe Anhang \ref{anhang:dockercompose}, wird ausgeführt, wodurch alle Container gestartet werden.
+    
+    Für die Nutzung von Podman lautet der entsprechende Befehl:
+
+    \begin{lstlisting}[language=bash]
+    podman-compose build 
+    podman-compose up 
+    \end{lstlisting}
+
+    Für die Nutzung von Docker lautet der entsprechende Befehl:
+
+    \begin{lstlisting}[language=bash]
+    docker-compose build
+    docker-compose up 
+    \end{lstlisting}
+
+\end{enumerate}
+
+Die Infrastruktur umfasst mehrere Container, die verschiedene Komponenten der Lakehouse-Architektur implementieren:
+
+\paragraph{MinIO (storage und storage-init)}  
+MinIO dient als Objektspeicher und stellt den zentralen Speicherort für die Daten im Delta- und Parquet-Format bereit. Der Container \lstinline|storage-init| ist für die Initialisierung und Konfiguration des MinIO-Speichers zuständig.
+
+\paragraph{Compute (duckdb-ibis-python)}  
+Dieser Container enthält DuckDB und Ibis, die für die Analyse und Verarbeitung der in MinIO gespeicherten Daten verantwortlich sind. Die Umgebung ist darauf ausgelegt, Daten direkt aus MinIO zu lesen, zu verarbeiten und für weiterführende Analysen vorzubereiten.
+
+\paragraph{Visualisierung (apache-superset)}  
+Apache Superset dient als Visualisierungstool und ermöglicht die Erstellung von Dashboards und Berichten auf Basis der von DuckDB analysierten Daten.  
+
+\paragraph{Apache Spark Cluster (spark-master, spark-worker, spark-submit)}  
+Apache Spark ist für die Verarbeitung der Ursprungsdaten (\lstinline|ds_salaries.csv|) zuständig. Der Spark-Master und Spark-Worker bilden den Cluster, während der \lstinline|spark-submit|-Container periodisch Jobs zur Verarbeitung ausführt. 
+
+\paragraph{Scraper (scraper)}  
+Der Scraper-Container ist für das Abrufen externer Gehälter von \url{https://www.glassdoor.de/Job/Data-Scientist-jobs-SRCH_KO0,10.htm} vorgesehen. Die extrahierten Daten können direkt in den Speicher oder die Verarbeitungs-Pipeline eingespeist werden.
+
+\section{Überprüfung der Installation}
+
+Nach dem erfolgreichen Ausführen der Befehle werden die einzelnen Container gestartet und sind unter den in der \lstinline|docker-compose.yml| definierten Ports und URLs erreichbar. Die folgenden Komponenten sollten anschließend zur Verfügung stehen:
+
+\begin{itemize}
+    \item \textbf{MinIO:} \url{http://localhost:9000}.
+    \item \textbf{Apache Superset:} \url{http://localhost:8088}.
+    \item \textbf{Apache Spark:} \url{http://localhost:8080}.
+    \item \textbf{DuckDB:} Verarbeitet die Daten direkt aus dem Objektspeicher und führt Analysen durch.
+\end{itemize}
+
+Die Installation erfolgt lokal und wurde im Rahmen der Entwicklung erfolgreich auf verschiedenen Endgeräten mit Podman und Docker als Container-Laufzeitumgebungen getestet.
 
 
-\section{Werkzeuge}\label{section:werkzeuge}
 

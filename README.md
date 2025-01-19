@@ -54,7 +54,7 @@ README.md
 
 ## Versionen
 
-Der Programmcode wurde mit folgenden Versionen getestet und auf Podman Version 1.15.0 ausgeführt: 
+Die Container wurde mit folgenden Versionen getestet und auf Podman Version 1.15.0 ausgeführt: 
 
 - bitnami/spark:3.4.1
 - apache/superset:latest
@@ -67,14 +67,31 @@ Der Programmcode wurde mit folgenden Versionen getestet und auf Podman Version 1
 
 1. Repository klonen
 2. .env Datei erstellen und die Variablen entsprechend anpassen für minio und superset (für die Abgabe wurde die .env Datei mitgeliefert)
+```
+# MinIO
+MINIO_ROOT_USER=
+MINIO_ROOT_PASSWORD=
+MINIO_URL=
+MINIO_BUCKET=
+MINIO_ACCESS_KEY=
+MINIO_SECRET_KEY=
+
+# Superset
+SUPERSET_ADMIN_USERNAME=
+SUPERSET_ADMIN_PASSWORD=
+SUPERSET_SECRET_KEY=
+```
 3. Podman Container erstellen mittels:
 ```
 podman-compose build
 ```
-4. Podman Container starten mittels:
+1. Podman Container starten mittels:
 ```
 podman-compose up
 ```
+
+- Die Container wurden auf zwei verschiedenen Endgeräten getestet und sowohl mit Podman Version 1.15.0 sowie mit Docker Version 4.36.0 erfolgreich ausgeführt.
+  
 ## Herunterfahren
 
 Podman Container stoppen mittels:
@@ -95,3 +112,10 @@ Der einzige manuelle Schritt betrifft die Konfiguration von Apache Superset. Nac
 Apache Spark ist ebenfalls über die bereitgestellte URL zugänglich, sodass die ausgeführten Jobs eingesehen und überwacht werden können. Beim Starten der Container erfolgt ein automatischer Import der Daten in MinIO, die anschließend von Apache Spark verarbeitet werden. 
 
 Dabei wird die hinterlegte Datei `ds_salaries.csv`, die Gehaltsdaten zu verschiedenen Jobpositionen und Standorten enthält, in drei separate Tabellen aufgeteilt. Diese Tabellen werden danach als Delta-Lake-Dateien im Parquet-Format in MinIO abgelegt, wodurch eine effiziente Speicherung und Weiterverarbeitung gewährleistet wird.
+
+## Verwendete Daten
+
+- Es wurde zum einen der Datensatz `ds_salaries.csv` verwendet, der Gehaltsdaten zu verschiedenen Jobpositionen und Standorten enthält. Dieser Datensatz wurde für die Analyse, Verarbeitung und Visualisierung in dieser Abgabe verwendet.
+- Der Datensatz ist online verfügbar unter: https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023 und in der Abgabe im Ordner `spark/data` hinterlegt.
+- Zusätzlich wurde ein Web-Scraper entwickelt, der Gehaltsdaten von der Webseite Glassdoor sammelt. Die gesammelten Daten werden in die bestehende CSV-Datei integriert, um diese mit weiteren Informationen anzureichern und eine Echtzeitverarbeitung sowie Visualisierung zu ermöglichen.
+- Der Web-Scraper ist im Ordner `scraper` hinterlegt und kann durch Ausführen des Containers gestartet werden.

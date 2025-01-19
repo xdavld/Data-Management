@@ -75,16 +75,12 @@ salaries = ibis_con.table("salaries")
 
 # Function to save Ibis expressions to DuckDB
 def save_to_duckdb(ibis_expr, connection, table_name):
-    # Execute the Ibis expression to get a Pandas DataFrame
     df = ibis_expr.execute()
     
-    # Register the DataFrame with DuckDB
     connection.register("temp_df", df)
     
-    # Create or replace the target table with the DataFrame's data
     connection.execute(f"CREATE OR REPLACE TABLE {table_name} AS SELECT * FROM temp_df")
     
-    # Optionally, unregister the temporary DataFrame
     connection.unregister("temp_df")
 
 # Example Analysis 1: Average Salary by Job Title

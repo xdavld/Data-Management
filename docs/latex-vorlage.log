@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.16)  18 JAN 2025 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.16)  19 JAN 2025 22:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -724,7 +724,62 @@ Package scrhack Info: redefining \lstlistoflistings on input line 143.
 Package scrhack Info: loading setspace hack on input line 199.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/setspace.hak
 File: setspace.hak 2021/11/13 v3.35 KOMA-Script scrhack part (hacking package setspace)
-)))
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count444
+\float@exts=\toks24
+\float@box=\box56
+\@float@everytoks=\toks25
+\@floatcapt=\box57
+)
+Package scrhack Info: loading float hack on input line 166.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/float.hak
+File: float.hak 2021/11/13 v3.35 KOMA-Script scrhack part (hacking package float)
+Package scrhack Info: redefining \newfloat on input line 163.
+Package scrhack Info: redefining \listof on input line 163.
+Package scrhack Info: undefining \float@addtolists on input line 163.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+
+xurl: Set penalties for biblatex
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen159
+\captionmargin=\dimen160
+\caption@leftmargin=\dimen161
+\caption@rightmargin=\dimen162
+\caption@width=\dimen163
+\caption@indent=\dimen164
+\caption@parindent=\dimen165
+\caption@hangindent=\dimen166
+Package caption Info: KOMA-Script document class detected.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption-koma.sto
+File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count445
+\c@continuedfloat=\count446
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
@@ -734,7 +789,16 @@ LaTeX Warning: Unused global option(s):
 
 (./latex-vorlage.aux
 
-LaTeX Warning: Label `chapter:Grundlagen' multiply defined.
+LaTeX Warning: Label `fig:DataWarehouse-Architecture' multiply defined.
+
+
+LaTeX Warning: Label `fig:DataLake-Architecture' multiply defined.
+
+
+LaTeX Warning: Label `fig:Delta-Employee-Table' multiply defined.
+
+
+LaTeX Warning: Label `fig:chart3' multiply defined.
 
 )
 \openout1 = `latex-vorlage.aux'.
@@ -757,7 +821,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
-\c@lstlisting=\count444
+\c@lstlisting=\count447
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -795,17 +859,17 @@ LaTeX Font Info:    ... okay on input line 17.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count445
-\scratchdimen=\dimen159
-\scratchbox=\box56
-\nofMPsegments=\count446
-\nofMParguments=\count447
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count448
-\MPscratchDim=\dimen160
-\MPnumerator=\count449
-\makeMPintoPDFobject=\count450
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count448
+\scratchdimen=\dimen167
+\scratchbox=\box58
+\nofMPsegments=\count449
+\nofMParguments=\count450
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count451
+\MPscratchDim=\dimen168
+\MPnumerator=\count452
+\makeMPintoPDFobject=\count453
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -833,15 +897,7 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'latex-vorlage.bbl' found.
- (./latex-vorlage.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                OhneAutorenOhneJahr
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./latex-vorlage.bbl)
 Package biblatex Info: Reference section=0 on input line 17.
 Package biblatex Info: Reference segment=0 on input line 17.
 Package hyperref Info: Link coloring OFF on input line 17.
@@ -852,7 +908,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count451
+\c@section@level=\count454
 )
 LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
@@ -873,9 +929,11 @@ Class scrreprt Info: loading recommended package `bookmark'.
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count452
+\BKM@id=\count455
 ))
 Package scrhack Info: undefining \float@addtolists on input line 17.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 Package scrbase Info: activating ngerman \refname on input line 17.
 Package scrbase Info: activating ngerman \figurename on input line 17.
 Package scrbase Info: activating ngerman \tablename on input line 17.
@@ -904,14 +962,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
  [2
 
 
-] (./includes/abkuerzungen.tex
-
-LaTeX Warning: Hyper reference `acro:ACID' on page III undefined on input line 5.
-
-
-LaTeX Warning: Hyper reference `acro:ACID' on page III undefined on input line 5.
-
-) [3
+] (./includes/abkuerzungen.tex) [3
 
 
 ] (./latex-vorlage.lof)
@@ -920,18 +971,18 @@ LaTeX Warning: Hyper reference `acro:ACID' on page III undefined on input line 5
 
  [4
 
-] (./latex-vorlage.lot)
-\tf@lot=\write7
-\openout7 = `latex-vorlage.lot'.
-
- [5
-
 ] (./includes/Grundlagen.tex
 chapter 1.
+Package acronym Info: Label `acro:LH' newly defined as it shall be overridden
+although it is yet undefined on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 2.
+Package acronym Info: Label `acro:DL' newly defined as it shall be overridden
+although it is yet undefined on input line 3.
+Package acronym Info: Label `acro:DW' newly defined as it shall be overridden
+although it is yet undefined on input line 3.
 Package acronym Info: Label `acro:ML' newly defined as it shall be overridden
 although it is yet undefined on input line 3.
 Package acronym Info: Label `acro:BI' newly defined as it shall be overridden
@@ -939,55 +990,169 @@ although it is yet undefined on input line 4.
 Package acronym Info: Label `acro:SQL' newly defined as it shall be overridden
 although it is yet undefined on input line 4.
 Package acronym Info: Label `acro:ETL' newly defined as it shall be overridden
-although it is yet undefined on input line 7.
+although it is yet undefined on input line 6.
+Package acronym Info: Label `acro:ACID' newly defined as it shall be overridden
+although it is yet undefined on input line 6.
 Package acronym Info: Label `acro:OLTP' newly defined as it shall be overridden
-although it is yet undefined on input line 10.
+although it is yet undefined on input line 11.
 Package acronym Info: Label `acro:OLAP' newly defined as it shall be overridden
-although it is yet undefined on input line 13.
-Package acronym Info: Label `acro:DW' newly defined as it shall be overridden
 although it is yet undefined on input line 15.
-Package acronym Info: Label `acro:DL' newly defined as it shall be overridden
-although it is yet undefined on input line 17.
 [1
 
 
 
+
 ]
-Package acronym Info: Label `acro:LH' newly defined as it shall be overridden
-although it is yet undefined on input line 20.
-) (./includes/Installation.tex [2]
+Package acronym Info: Label `acro:CRM' newly defined as it shall be overridden
+although it is yet undefined on input line 19.
+Package acronym Info: Label `acro:ERP' newly defined as it shall be overridden
+although it is yet undefined on input line 19.
+<graphics/dw-architecture.png, id=217, 982.67125pt x 443.6575pt>
+File: graphics/dw-architecture.png Graphic file (type png)
+<use graphics/dw-architecture.png>
+Package pdftex.def Info: graphics/dw-architecture.png  used on input line 24.
+(pdftex.def)             Requested size: 318.66948pt x 143.86879pt.
+ [2 <./graphics/dw-architecture.png>]
+<graphics/dl-architecture.png, id=252, 990.70125pt x 428.60126pt>
+File: graphics/dl-architecture.png Graphic file (type png)
+<use graphics/dl-architecture.png>
+Package pdftex.def Info: graphics/dl-architecture.png  used on input line 39.
+(pdftex.def)             Requested size: 318.66948pt x 137.86151pt.
+Package acronym Info: Label `acro:DBMS' newly defined as it shall be overridden
+although it is yet undefined on input line 48.
+Package acronym Info: Label `acro:HDFS' newly defined as it shall be overridden
+although it is yet undefined on input line 52.
+ [3 <./graphics/dl-architecture.png>]
+<graphics/lh-architecture.png, id=311, 527.9725pt x 218.8175pt>
+File: graphics/lh-architecture.png Graphic file (type png)
+<use graphics/lh-architecture.png>
+Package pdftex.def Info: graphics/lh-architecture.png  used on input line 65.
+(pdftex.def)             Requested size: 318.66948pt x 132.06946pt.
+ [4 <./graphics/lh-architecture.png>]) (./includes/Installation.tex [5]
 chapter 2.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) [6
 
-LaTeX Warning: Reference `section:fehlerbehebung' on page 3 undefined on input line 7.
-
-
-LaTeX Warning: Reference `chapter:zitate' on page 3 undefined on input line 7.
-
-
-LaTeX Warning: Reference `chapter:abbildungenTabellen' on page 3 undefined on input line 7.
-
-) (./includes/Beispiel.tex [3
-
-]
+] [7]) (./includes/Beispiel.tex [8]
 chapter 3.
+<graphics/datensatz.png, id=399, 794.97pt x 326.21875pt>
+File: graphics/datensatz.png Graphic file (type png)
+<use graphics/datensatz.png>
+Package pdftex.def Info: graphics/datensatz.png  used on input line 10.
+(pdftex.def)             Requested size: 455.24411pt x 186.8177pt.
+[9
 
-LaTeX Warning: Reference `abb:Logo2cmBreit' on page 4 undefined on input line 6.
+ <./graphics/datensatz.png>]
+<graphics/minio-login.png, id=410, 1928.20375pt x 995.72pt>
+File: graphics/minio-login.png Graphic file (type png)
+<use graphics/minio-login.png>
+Package pdftex.def Info: graphics/minio-login.png  used on input line 27.
+(pdftex.def)             Requested size: 455.24411pt x 235.08817pt.
+<graphics/minio.png, id=412, 1928.20375pt x 994.71625pt>
+File: graphics/minio.png Graphic file (type png)
+<use graphics/minio.png>
+Package pdftex.def Info: graphics/minio.png  used on input line 36.
+(pdftex.def)             Requested size: 455.24411pt x 234.85117pt.
+ [10 <./graphics/minio-login.png>]
+<graphics/spark.png, id=419, 1926.19624pt x 995.72pt>
+File: graphics/spark.png Graphic file (type png)
+<use graphics/spark.png>
+Package pdftex.def Info: graphics/spark.png  used on input line 47.
+(pdftex.def)             Requested size: 455.24411pt x 235.33125pt.
+ [11 <./graphics/minio.png>]
+<graphics/scraper.png, id=426, 597.23125pt x 102.3825pt>
+File: graphics/scraper.png Graphic file (type png)
+<use graphics/scraper.png>
+Package pdftex.def Info: graphics/scraper.png  used on input line 56.
+(pdftex.def)             Requested size: 364.19667pt x 62.43448pt.
+<graphics/delta-folder.png, id=428, 1927.2pt x 992.70876pt>
+File: graphics/delta-folder.png Graphic file (type png)
+<use graphics/delta-folder.png>
+Package pdftex.def Info: graphics/delta-folder.png  used on input line 65.
+(pdftex.def)             Requested size: 455.24411pt x 234.49838pt.
+ [12 <./graphics/spark.png> <./graphics/scraper.png>]
+<graphics/delta-folder-employees.png, id=436, 1926.19624pt x 996.72375pt>
+File: graphics/delta-folder-employees.png Graphic file (type png)
+<use graphics/delta-folder-employees.png>
+Package pdftex.def Info: graphics/delta-folder-employees.png  used on input line 74.
+(pdftex.def)             Requested size: 455.24411pt x 235.56848pt.
+<graphics/analysen.png, id=437, 299.1175pt x 495.8525pt>
+File: graphics/analysen.png Graphic file (type png)
+<use graphics/analysen.png>
+Package pdftex.def Info: graphics/analysen.png  used on input line 83.
+(pdftex.def)             Requested size: 227.62206pt x 377.33604pt.
+ [13 <./graphics/delta-folder.png> <./graphics/delta-folder-employees.png>]
+<graphics/salary-by-job.jpg, id=445, 1241.63875pt x 729.72626pt>
+File: graphics/salary-by-job.jpg Graphic file (type jpg)
+<use graphics/salary-by-job.jpg>
+Package pdftex.def Info: graphics/salary-by-job.jpg  used on input line 95.
+(pdftex.def)             Requested size: 455.24411pt x 267.54485pt.
+ [14 <./graphics/analysen.png>]
+<graphics/salary-trend-year.jpg, id=452, 1241.63875pt x 729.72626pt>
+File: graphics/salary-trend-year.jpg Graphic file (type jpg)
+<use graphics/salary-trend-year.jpg>
+Package pdftex.def Info: graphics/salary-trend-year.jpg  used on input line 104.
+(pdftex.def)             Requested size: 364.19667pt x 214.04256pt.
+ [15 <./graphics/salary-by-job.jpg> <./graphics/salary-trend-year.jpg>]) (./includes/anhang.tex [16] (./latex-vorlage.app)
+\tf@app=\write7
+\openout7 = `latex-vorlage.app'.
 
-<graphics/dhbw.png, id=165, 710.655pt x 299.1175pt>
-File: graphics/dhbw.png Graphic file (type png)
-<use graphics/dhbw.png>
-Package pdftex.def Info: graphics/dhbw.png  used on input line 10.
-(pdftex.def)             Requested size: 135.19934pt x 56.9055pt.
+ [17
 
-LaTeX Warning: Citation 'OhneAutorenOhneJahr' on page 4 undefined on input line 14.
+] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 11.
+ (./includes/compose.yml [18
 
-) [4
-
- <./graphics/dhbw.png>] [5
+] [19] [20] [21])
+<graphics/salary-distribution-by-experience-level-2025-01-19T14-55-24.076Z.jpg, id=659, 1241.63875pt x 729.72626pt>
+File: graphics/salary-distribution-by-experience-level-2025-01-19T14-55-24.076Z.jpg Graphic file (type jpg)
+<use graphics/salary-distribution-by-experience-level-2025-01-19T14-55-24.076Z.jpg>
+Package pdftex.def Info: graphics/salary-distribution-by-experience-level-2025-01-19T14-55-24.076Z.jpg  used on input line 18.
+(pdftex.def)             Requested size: 455.24411pt x 267.54485pt.
+ [22]
+<graphics/salary-remote-ratio.jpg, id=704, 1241.63875pt x 729.72626pt>
+File: graphics/salary-remote-ratio.jpg Graphic file (type jpg)
+<use graphics/salary-remote-ratio.jpg>
+Package pdftex.def Info: graphics/salary-remote-ratio.jpg  used on input line 27.
+(pdftex.def)             Requested size: 364.19667pt x 214.04256pt.
+<graphics/employee-per-company.jpg, id=705, 1241.63875pt x 729.72626pt>
+File: graphics/employee-per-company.jpg Graphic file (type jpg)
+<use graphics/employee-per-company.jpg>
+Package pdftex.def Info: graphics/employee-per-company.jpg  used on input line 36.
+(pdftex.def)             Requested size: 455.24411pt x 267.54485pt.
+ [23 <./graphics/salary-distribution-by-experience-level-2025-01-19T14-55-24.076Z.jpg> <./graphics/salary-remote-ratio.jpg>]
+<graphics/core dump.png, id=716, 1556.81625pt x 260.975pt>
+File: graphics/core dump.png Graphic file (type png)
+<use graphics/core dump.png>
+Package pdftex.def Info: graphics/core dump.png  used on input line 45.
+(pdftex.def)             Requested size: 455.24411pt x 76.31396pt.
+) [24 <./graphics/employee-per-company.jpg> <./graphics/core dump.png>] [25
 
 
 ] (./includes/erklaerung_ki.tex
@@ -1006,8 +1171,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--106
  []
 
 
-Underfull \hbox (badness 6016) in paragraph at lines 106--106
-[]\T1/cmr/m/n/10.95 Einzelne Ka-pi-tel der Ar-beit wur-den
+Underfull \hbox (badness 3769) in paragraph at lines 106--106
+[]\T1/cmr/m/n/10.95 Das ers-te Ka-pi-tel der Ar-beit wur-de
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 106--106
+\T1/cmr/m/n/10.95 ChatGPT zum Kor-ri-gie-ren auf Recht-
  []
 
 
@@ -1015,22 +1185,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--106
 []\T1/cmr/m/n/10.95 Einige Pro-gramm-zei-len wur-den an
  []
 
-) (./template/_dhbw_erklaerung.tex [6
+) (./template/_dhbw_erklaerung.tex [26
 
 
 
 ]
-<graphics/signature.png, id=192, 189.70876pt x 65.24374pt>
+<graphics/signature.png, id=748, 189.70876pt x 65.24374pt>
 File: graphics/signature.png Graphic file (type png)
 <use graphics/signature.png>
 Package pdftex.def Info: graphics/signature.png  used on input line 19.
 (pdftex.def)             Requested size: 136.57462pt x 46.97047pt.
-) [7
+) [27
 
  <./graphics/signature.png>] (./latex-vorlage.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1041,18 +1208,18 @@ Package logreq Info: Writing requests to 'latex-vorlage.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26736 strings out of 478268
- 537453 string characters out of 5846347
- 1404600 words of memory out of 5000000
- 44525 multiletter control sequences out of 15000+600000
- 487206 words of font info for 60 fonts, out of 8000000 for 9000
+ 30757 strings out of 478268
+ 603285 string characters out of 5846347
+ 1609035 words of memory out of 5000000
+ 48151 multiletter control sequences out of 15000+600000
+ 487201 words of font info for 60 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,18n,106p,10682b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on latex-vorlage.pdf (12 pages, 343389 bytes).
+ 108i,18n,106p,10682b,2777s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on latex-vorlage.pdf (31 pages, 2716521 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 99 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 942 PDF objects out of 1000 (max. 8388607)
+ 838 compressed objects within 9 object streams
+ 378 named destinations out of 1000 (max. 500000)
+ 195 words of extra memory for PDF output out of 10000 (max. 10000000)
 

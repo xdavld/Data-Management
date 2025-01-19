@@ -1,5 +1,17 @@
 \babel@toc {ngerman}{}\relax 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1}{\ignorespaces Data Warehouse Architektur}}{2}{figure.caption.15}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Data Lake Architektur}}{3}{figure.caption.16}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Data Lakehouse Architektur}}{4}{figure.caption.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces DHBW-Logo 2cm hoch}}{4}{figure.3.1}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Beschreibung der Spalten des Datensatzes}}{9}{figure.caption.30}%
+\contentsline {figure}{\numberline {5}{\ignorespaces MinIO - Login Screen}}{10}{figure.caption.31}%
+\contentsline {figure}{\numberline {6}{\ignorespaces MinIO mit erstelltem lakehouse-storage Bucket}}{11}{figure.caption.32}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Oberfläche des Apache Spark Clusters}}{12}{figure.caption.33}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Ein Ausschnitt einer gescrapten Jobstelle von Glassdoor}}{12}{figure.caption.34}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Zerlegte CSV-Datei in Delta Lake Tabellen}}{13}{figure.caption.35}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Delta Lake Employee Tabelle mit Parquet-Dateien}}{13}{figure.caption.36}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Analysen mittels DuckDB und Ibis zur Visualisierung in Apache Superset}}{14}{figure.caption.37}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Durchschnittsgehälter nach Jobpositionen}}{15}{figure.caption.38}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Durchschnittliche Gehaltsentwicklung bei Data Science Jobs über die Jahre}}{15}{figure.caption.39}%

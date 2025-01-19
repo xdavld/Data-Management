@@ -23,9 +23,9 @@ def get_jobs(keyword, num_jobs, verbose):
     
 
     # Configure ChromeDriver and Chrome paths
-    chrome_service = Service("/usr/bin/chromedriver")  # Path to ChromeDriver binary
+    chrome_service = Service("/usr/bin/chromedriver") 
     options = Options()
-    options.binary_location = "/usr/bin/google-chrome"  # Path to Chrome binary
+    options.binary_location = "/usr/bin/google-chrome"  
 
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
@@ -117,7 +117,6 @@ def get_jobs(keyword, num_jobs, verbose):
                 continue
         
             try:
-                # Wait for the button with class name 'CloseButton' to be clickable
                 close_button = WebDriverWait(driver, 10).until(
                     EC.element_to_be_clickable((By.CLASS_NAME, 'CloseButton'))
                 )

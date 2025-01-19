@@ -66,6 +66,209 @@
       \verb /Users/david/Zotero/storage/6FDML864/Armbrust et al. - 2021 - Lakehouse A New Generation of Open Platforms that.pdf
       \endverb
     \endentry
+    \entry{dixonPentahoHadoopData2010}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=41f5f74b09a0256195d86fd63cc20f69}{%
+           family={Dixon},
+           familyi={D\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{41f5f74b09a0256195d86fd63cc20f69}
+      \strng{fullhash}{41f5f74b09a0256195d86fd63cc20f69}
+      \strng{bibnamehash}{41f5f74b09a0256195d86fd63cc20f69}
+      \strng{authorbibnamehash}{41f5f74b09a0256195d86fd63cc20f69}
+      \strng{authornamehash}{41f5f74b09a0256195d86fd63cc20f69}
+      \strng{authorfullhash}{41f5f74b09a0256195d86fd63cc20f69}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Earlier this week, at Hadoop World in New York,~ Pentaho announced availability of our first Hadoop release. As part of the initial research into the Hadoop arena I talked to many companies that us{\dots}}
+      \field{journaltitle}{James Dixon's Blog}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Pentaho, {{Hadoop}}, and {{Data Lakes}}}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/david/Zotero/storage/PCHRL3A9/pentaho-hadoop-and-data-lakes.html
+      \endverb
+    \endentry
+    \entry{Dockerinc.DevelopFasterRun2025}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bd3b392874c74fba4ed57a24eae0ac1}{%
+           family={{Docker Inc.}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Docker Inc.}%
+      }
+      \strng{namehash}{4bd3b392874c74fba4ed57a24eae0ac1}
+      \strng{fullhash}{4bd3b392874c74fba4ed57a24eae0ac1}
+      \strng{bibnamehash}{4bd3b392874c74fba4ed57a24eae0ac1}
+      \strng{authorbibnamehash}{4bd3b392874c74fba4ed57a24eae0ac1}
+      \strng{authornamehash}{4bd3b392874c74fba4ed57a24eae0ac1}
+      \strng{authorfullhash}{4bd3b392874c74fba4ed57a24eae0ac1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{german}
+      \field{title}{Develop faster. Run anywhere.}
+      \field{urlday}{19}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.docker.com/
+      \endverb
+      \verb{url}
+      \verb https://www.docker.com/
+      \endverb
+    \endentry
+    \entry{10020719}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3ccb4ce3df64004299f95ab5db4d3c0f}{%
+           family={Harby},
+           familyi={H\bibinitperiod},
+           given={Ahmed\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0de5a7fc09c3f61fadd7255b3a210f1c}{%
+           family={Zulkernine},
+           familyi={Z\bibinitperiod},
+           given={Farhana},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{99a5a8773fab4744bbd56d51c478d049}
+      \strng{fullhash}{99a5a8773fab4744bbd56d51c478d049}
+      \strng{bibnamehash}{99a5a8773fab4744bbd56d51c478d049}
+      \strng{authorbibnamehash}{99a5a8773fab4744bbd56d51c478d049}
+      \strng{authornamehash}{99a5a8773fab4744bbd56d51c478d049}
+      \strng{authorfullhash}{99a5a8773fab4744bbd56d51c478d049}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 {{IEEE}} International Conference on Big Data (Big Data)}
+      \field{title}{From Data Warehouse to Lakehouse: A Comparative Review}
+      \field{year}{2022}
+      \field{pages}{389\bibrangedash 395}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/BigData55660.2022.10020719
+      \endverb
+      \verb{file}
+      \verb /Users/david/Zotero/storage/6TZRMP2H/Harby and Zulkernine - 2022 - From data warehouse to lakehouse a comparative re.pdf
+      \endverb
+      \keyw{Big data,Big Data applications,Data Lake,Data Lakehouse,Data mining,Data Warehouse,Data warehouses,Distributed databases,Information systems}
+    \endentry
+    \entry{inmonDataLakeArchitecture2016}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6381218acfd5a0200c9012f01f43513f}{%
+           family={Inmon},
+           familyi={I\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Technics Publications, LLC}%
+      }
+      \strng{namehash}{6381218acfd5a0200c9012f01f43513f}
+      \strng{fullhash}{6381218acfd5a0200c9012f01f43513f}
+      \strng{bibnamehash}{6381218acfd5a0200c9012f01f43513f}
+      \strng{authorbibnamehash}{6381218acfd5a0200c9012f01f43513f}
+      \strng{authornamehash}{6381218acfd5a0200c9012f01f43513f}
+      \strng{authorfullhash}{6381218acfd5a0200c9012f01f43513f}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1-63462-117-4}
+      \field{title}{Data {{Lake Architecture}}: {{Designing}} the {{Data Lake}} and {{Avoiding}} the {{Garbage Dump}}}
+      \field{year}{2016}
+    \endentry
+    \entry{kimball2013data}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6ec3b140429bc59ad63c593b172f665c}{%
+           family={Kimball},
+           familyi={K\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=257f73b4d408fcd5e8d4a110ef8c8f49}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={Margy},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{c18f3b1557ab75000609609691801c5b}
+      \strng{fullhash}{c18f3b1557ab75000609609691801c5b}
+      \strng{bibnamehash}{c18f3b1557ab75000609609691801c5b}
+      \strng{authorbibnamehash}{c18f3b1557ab75000609609691801c5b}
+      \strng{authornamehash}{c18f3b1557ab75000609609691801c5b}
+      \strng{authorfullhash}{c18f3b1557ab75000609609691801c5b}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The data warehouse toolkit: The definitive guide to dimensional modeling}
+      \field{year}{2013}
+    \endentry
+    \entry{linstedt2015building}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2bf6facf749330bba4aa8c0463ea1fe8}{%
+           family={Linstedt},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a299c6849b0723d23b3cf51645fac7c}{%
+           family={Olschimke},
+           familyi={O\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann}%
+      }
+      \strng{namehash}{21fb18f1d6dd37741f267f77d81dc554}
+      \strng{fullhash}{21fb18f1d6dd37741f267f77d81dc554}
+      \strng{bibnamehash}{21fb18f1d6dd37741f267f77d81dc554}
+      \strng{authorbibnamehash}{21fb18f1d6dd37741f267f77d81dc554}
+      \strng{authornamehash}{21fb18f1d6dd37741f267f77d81dc554}
+      \strng{authorfullhash}{21fb18f1d6dd37741f267f77d81dc554}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Building a scalable data warehouse with data vault 2.0}
+      \field{year}{2015}
+    \endentry
     \entry{mazumdarDataLakehouseData2023}{misc}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=01f21c1a682f93e70e5e71d3ba7faf12}{%
@@ -123,6 +326,71 @@
       \endverb
       \keyw{Computer Science - Databases}
     \endentry
+    \entry{d.orescaninDataLakehouseNovel2021}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=205e07df160d4862d3b0ed176fbac6bf}{%
+           family={{Oreščanin}},
+           familyi={O\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=e066baa766a34dda79409dfc249ec1ee}{%
+           family={{Hlupić}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6313cd2b215debd506a398bff3a2776a}
+      \strng{fullhash}{6313cd2b215debd506a398bff3a2776a}
+      \strng{bibnamehash}{6313cd2b215debd506a398bff3a2776a}
+      \strng{authorbibnamehash}{6313cd2b215debd506a398bff3a2776a}
+      \strng{authornamehash}{6313cd2b215debd506a398bff3a2776a}
+      \strng{authorfullhash}{6313cd2b215debd506a398bff3a2776a}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 44th {{International Convention}} on {{Information}}, {{Communication}} and {{Electronic Technology}} ({{MIPRO}})}
+      \field{isbn}{2623-8764}
+      \field{title}{Data {{Lakehouse}} - a {{Novel Step}} in {{Analytics Architecture}}}
+      \field{year}{2021}
+      \field{pages}{1242\bibrangedash 1246}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.23919/MIPRO52101.2021.9597091
+      \endverb
+    \endentry
+    \entry{Podman.DevelopFasterRun2025}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=455cbd59356abfa16dcf7666d4ae6c2b}{%
+           family={Podman},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Red Hat}%
+      }
+      \strng{namehash}{455cbd59356abfa16dcf7666d4ae6c2b}
+      \strng{fullhash}{455cbd59356abfa16dcf7666d4ae6c2b}
+      \strng{bibnamehash}{455cbd59356abfa16dcf7666d4ae6c2b}
+      \strng{authorbibnamehash}{455cbd59356abfa16dcf7666d4ae6c2b}
+      \strng{authornamehash}{455cbd59356abfa16dcf7666d4ae6c2b}
+      \strng{authorfullhash}{455cbd59356abfa16dcf7666d4ae6c2b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{german}
+      \field{title}{The best free \& open source container tools.}
+      \field{urlday}{19}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://podman.io/
+      \endverb
+      \verb{url}
+      \verb https://podman.io/
+      \endverb
+    \endentry
     \entry{vaismanDataWarehouseSystems2014}{book}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=ebb08ff5120e6bd00a89e58d6b1e3b66}{%
@@ -158,7 +426,6 @@
       \field{year}{2014}
     \endentry
   \enddatalist
-  \missing{OhneAutorenOhneJahr}
 \endrefsection
 \endinput
 
